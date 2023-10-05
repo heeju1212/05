@@ -5,17 +5,18 @@
 
 int main(int argc, char *argv[]) {
 	int num;
-	printf("정수 하나를 입력하세요 : ");
-	scanf("%i",&num);
+	int abs;
+	printf("정수 하나를 입력하세요 :");
+	scanf("%d",&num);
 	
-	if (num > 0){
-		printf("이 수는 양수입니다.\n");
-	} 
-	else if (num < 0){
-		printf("이 수는 음수입니다.\n");
+	
+	if (num < 0){
+		abs = -num;
 	}
 	else{
-		printf("이 수는 0입니다.\n");
+		abs = num;
 	}
+	printf("절댓값은 %d입니다.\n",abs);
+	system("PAUSE");
 	return 0;
 }
